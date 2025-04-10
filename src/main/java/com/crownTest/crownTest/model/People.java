@@ -2,6 +2,7 @@ package com.crownTest.crownTest.model;
 
 public class People {
 
+    private Long id;
     private String name;
     private String height;
     private String mass;
@@ -11,7 +12,14 @@ public class People {
     private String birth_year;
     private String gender;
 
-    // Getters y Setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
     public String getName() {
         return name;
     }

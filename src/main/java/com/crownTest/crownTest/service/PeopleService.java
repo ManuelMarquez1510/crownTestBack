@@ -10,10 +10,17 @@ import com.crownTest.crownTest.repository.PeopleRepository;
 @Service
 public class PeopleService {
 
+    private static Long idCounter = 1L;
+
     @Autowired
     private PeopleRepository peopleRepository;
 
     public List<People> getPeople() {
-    return peopleRepository.fetchPeople();
-}
+        return peopleRepository.fetchPeople();
+    }
+
+    public People createPerson(People person) {
+        person.setId(idCounter++);
+        return person;
+    }
 }
