@@ -19,12 +19,12 @@ public class PeopleController {
     @Autowired
     private PeopleService peopleService;
 
-    @GetMapping("/getPeople")
+    @GetMapping("/people")
     public List<People> getPeople() {
         return peopleService.getPeople();
     }
 
-    @PostMapping("/createPeople")
+    @PostMapping("/people")
     public People addPerson(@RequestBody People person) {
         return peopleService.createPerson(person);
     }
